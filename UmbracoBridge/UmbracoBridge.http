@@ -1,0 +1,6 @@
+@UmbracoBridge_HostAddress = http://localhost:5298
+
+GET {{UmbracoBridge_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
