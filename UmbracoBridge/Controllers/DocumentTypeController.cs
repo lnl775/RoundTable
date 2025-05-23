@@ -19,7 +19,7 @@ namespace UmbracoBridge.Controllers
         }
 
         [HttpPost]
-        [ProducesResponseType(typeof(Guid), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
         public async Task<ActionResult> PostDocumentType([FromBody] DocumentType documentType)
         {
             _logger.LogInformation("Create DocumentType...");
@@ -33,13 +33,13 @@ namespace UmbracoBridge.Controllers
             if (result.IsSuccess)
             {
                 Guid? createdId = result.Data;
-                return Ok(createdId);
+                return Created(string.Empty, createdId);
             }
             return BadRequest(result.ErrorMessage);
         }
 
         [HttpDelete("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<ActionResult> DeleteDocumentType([FromRoute]Guid id)
         {
             _logger.LogInformation("Deleted DocumentType...");
@@ -48,7 +48,7 @@ namespace UmbracoBridge.Controllers
 
             if (result.IsSuccess)
             {
-                return Ok();
+                return NoContent();
             }
             return NotFound(result.ErrorMessage);
         }

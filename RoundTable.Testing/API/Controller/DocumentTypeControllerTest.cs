@@ -38,7 +38,7 @@ namespace RoundTable.Testing.API.Controller
             var result = await _controller.PostDocumentType(documentType);
 
             // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
+            var okResult = Assert.IsType<CreatedResult>(result);
             Assert.Equal(expectedGuid, okResult.Value);
         }
 
@@ -99,7 +99,7 @@ namespace RoundTable.Testing.API.Controller
             var result = await _controller.DeleteDocumentType(documentTypeId);
 
             // Assert
-            Assert.IsType<OkResult>(result);
+            Assert.IsType<NoContentResult>(result);
         }
 
         [Fact]
