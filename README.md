@@ -9,11 +9,11 @@ RoundTable is a .NET 9 solution designed to demonstrate the workflow between a w
 
 Together, these components illustrate the integration and interaction between a web API and a CMS within the .NET ecosystem.
 
+---
+
 # UmbracoCMS Setup Guide
 
 This guide provides step-by-step instructions to set up and configure UmbracoCMS with .NET Core.
-
----
 
 ## Prerequisites
 - .NET Core SDK installed on your system.
@@ -66,12 +66,10 @@ Decide level of consent telemetry (minimal, basic, detailed).
 
 4. Database Configuration:
 Select SQLite as the database type when prompted.
-
 Wait for the setup process to complete. Once finished, you will be redirected to the Umbraco login page.
 
 ### Step 5: Log in to the Umbraco Backoffice
 Use the admin account credentials you created earlier to log in.
-
 Once logged in, you will be taken to the Umbraco backoffice dashboard.
 
 ### Step 6: Create an API User Account
@@ -88,6 +86,10 @@ For more information use the [official documentation](https://docs.umbraco.com/u
 ### Step 8: Test UmbracoCMS Managment API
 1. Open your preferred web browser.
 2. Navigate to https://localhost:<PORT>/umbraco/swagger/index.html?urls.primaryName=Umbraco+Management+API (e.g., https://localhost:44338/umbraco/swagger/index.html?urls.primaryName=Umbraco+Management+API).
+
+---
+
+# UmbracoBridge Setup Guide
 
 ### Step 9: Use the generated client credentials to authenticate API requests
 1. Navigate to UmbracoBridge proyect 
@@ -134,9 +136,11 @@ Note the URL provided.
 
 ### Step 11: Test UmbracoBridge API
 1. Open your preferred web browser.
-2. Navigate to listening URL from output e.g.(http://localhost:5298)
+2. Navigate to http://localhost:5298/health to test healthy connection between UmbracoBridge API and UnmbracoCMS
+
 ---
-## UmbracoBridge Project
+
+# UmbracoBridge Project
 ### OpenApi & Documentation
 Replace the PORT with the actual from listening URL
 ### Swagger
