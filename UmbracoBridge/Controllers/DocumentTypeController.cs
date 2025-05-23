@@ -38,7 +38,7 @@ namespace UmbracoBridge.Controllers
             return BadRequest(result.ErrorMessage);
         }
 
-        [HttpDelete("{Id}")]
+        [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult> DeleteDocumentType([FromRoute]Guid id)
         {
