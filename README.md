@@ -76,8 +76,8 @@ Once logged in, you will be taken to the Umbraco backoffice dashboard.
 
 ### Step 6: Create an API User Account
 1. Navigate to the Users tab in the backoffice dashboard.
-2.Click on the Create button to generate a new API user account.
-3.Provide the necessary details for the API user (e.g., username and password).
+2. Click on the Create button to generate a new API user account.
+3. Provide the necessary details for the API user (e.g., username and password).
 Assign appropriate permissions to the API user.
 
 ### Step 7: Create client credential for API user
