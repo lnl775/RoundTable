@@ -102,15 +102,15 @@ For more information use the [official documentation](https://docs.umbraco.com/u
     "ClientSecret": "<umbraco-back-office-client-secret>"
   }
 ```
-3. Replace <PROTOCOL> and <PORT> for BaseUrl
-4. Replace ClientId value with client credential and SecretClient with the proper client credentials
+3. Replace "<PROTOCOL>" and "<PORT>" for BaseUrl
+4. Replace ClientId and SecretClient values with the proper client credentials
    e.g:
 ```json text
   "UmbracoCMSSettings": {
     "BaseUrl": "https://localhost:<PORT>/umbraco/management/api/v1/",
     "GrantType": "client_credentials",
-    "ClientId": "umbraco-back-office-client-id",
-    "ClientSecret": "umbraco-back-office-client-secret"
+    "ClientId": "umbraco-back-office-some-client-id",
+    "ClientSecret": "p4ssW0rd53cret!!!"
   }
 ```
 
