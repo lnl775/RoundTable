@@ -136,8 +136,46 @@ Note the URL provided.
 
 ### Step 11: Test UmbracoBridge API
 1. Open your preferred web browser.
-2. Navigate to http://localhost:5298/health to test healthy connection between UmbracoBridge API and UnmbracoCMS
+2. Navigate to http://localhost:5298/health to test healthy connection between UmbracoBridge API and UnmbracoCMS.
 
+You should see something like:
+```json text
+{
+  "status": "Healthy",
+  "totalDuration": "00:00:00.2763719",
+  "entries": {
+    "umbraco-cms-check": {
+      "data": {
+        "Total": 6,
+        "Items": [
+          {
+            "name": "Configuration"
+          },
+          {
+            "name": "Data Integrity"
+          },
+          {
+            "name": "Live Environment"
+          },
+          {
+            "name": "Permissions"
+          },
+          {
+            "name": "Security"
+          },
+          {
+            "name": "Services"
+          }
+        ]
+      },
+      "description": "Healthy",
+      "duration": "00:00:00.2712149",
+      "status": "Healthy",
+      "tags": []
+    }
+  }
+}
+```
 ---
 
 # UmbracoBridge Project
